@@ -14,6 +14,12 @@
 		F944DFC52268E3BE00A6A45E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F944DFC32268E3BE00A6A45E /* LaunchScreen.storyboard */; };
 		F944DFD02268E3BE00A6A45E /* purinmapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944DFCF2268E3BE00A6A45E /* purinmapTests.swift */; };
 		F944DFDB2268E3BE00A6A45E /* purinmapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944DFDA2268E3BE00A6A45E /* purinmapUITests.swift */; };
+		F944DFED226B055500A6A45E /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = F944DFEC226B055500A6A45E /* map.png */; };
+		F944DFEF226F7CAA00A6A45E /* libraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944DFEE226F7CAA00A6A45E /* libraryViewController.swift */; };
+		F944DFF122709E3000A6A45E /* ojisan.png in Resources */ = {isa = PBXBuildFile; fileRef = F944DFF022709E3000A6A45E /* ojisan.png */; };
+		F944DFF32270BAA200A6A45E /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944DFF22270BAA200A6A45E /* mapViewController.swift */; };
+		F9A56AEC22757C30002EC792 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A56AEB22757C30002EC792 /* test.png */; };
+		F9B984AF2274B05700DF450A /* prin.png in Resources */ = {isa = PBXBuildFile; fileRef = F9B984AE2274B05700DF450A /* prin.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		F944DFD62268E3BE00A6A45E /* purinmapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = purinmapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F944DFDA2268E3BE00A6A45E /* purinmapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = purinmapUITests.swift; sourceTree = "<group>"; };
 		F944DFDC2268E3BE00A6A45E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F944DFEC226B055500A6A45E /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map.png; path = ../../../Downloads/map.png; sourceTree = "<group>"; };
+		F944DFEE226F7CAA00A6A45E /* libraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libraryViewController.swift; sourceTree = "<group>"; };
+		F944DFF022709E3000A6A45E /* ojisan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ojisan.png; sourceTree = "<group>"; };
+		F944DFF22270BAA200A6A45E /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
+		F9A56AEB22757C30002EC792 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
+		F9B984AE2274B05700DF450A /* prin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = prin.png; path = ../../prin.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,12 @@
 			children = (
 				F944DFBA2268E3BB00A6A45E /* AppDelegate.swift */,
 				F944DFBC2268E3BB00A6A45E /* ViewController.swift */,
+				F944DFEE226F7CAA00A6A45E /* libraryViewController.swift */,
+				F944DFF22270BAA200A6A45E /* mapViewController.swift */,
+				F9A56AEB22757C30002EC792 /* test.png */,
+				F9B984AE2274B05700DF450A /* prin.png */,
+				F944DFEC226B055500A6A45E /* map.png */,
+				F944DFF022709E3000A6A45E /* ojisan.png */,
 				F944DFBE2268E3BB00A6A45E /* Main.storyboard */,
 				F944DFC12268E3BE00A6A45E /* Assets.xcassets */,
 				F944DFC32268E3BE00A6A45E /* LaunchScreen.storyboard */,
@@ -231,7 +249,11 @@
 			files = (
 				F944DFC52268E3BE00A6A45E /* LaunchScreen.storyboard in Resources */,
 				F944DFC22268E3BE00A6A45E /* Assets.xcassets in Resources */,
+				F9A56AEC22757C30002EC792 /* test.png in Resources */,
+				F9B984AF2274B05700DF450A /* prin.png in Resources */,
+				F944DFF122709E3000A6A45E /* ojisan.png in Resources */,
 				F944DFC02268E3BB00A6A45E /* Main.storyboard in Resources */,
+				F944DFED226B055500A6A45E /* map.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +278,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F944DFEF226F7CAA00A6A45E /* libraryViewController.swift in Sources */,
 				F944DFBD2268E3BB00A6A45E /* ViewController.swift in Sources */,
 				F944DFBB2268E3BB00A6A45E /* AppDelegate.swift in Sources */,
+				F944DFF32270BAA200A6A45E /* mapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,15 +456,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9PRS99ML5M;
 				INFOPLIST_FILE = purinmap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.litech.purinmap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -450,15 +477,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9PRS99ML5M;
 				INFOPLIST_FILE = purinmap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.litech.purinmap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
