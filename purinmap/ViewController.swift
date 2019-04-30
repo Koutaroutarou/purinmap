@@ -19,8 +19,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-
         pickerView.delegate = self
         pickerView.dataSource = self
         pickerView.showsSelectionIndicator = true
@@ -65,7 +63,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
         
-        
         func CGRectMake(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) -> CGRect {
             
             return CGRect(x: x, y: y, width: width, height: height)
@@ -75,28 +72,46 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBAction func toTappedPdding() {
         if textField.text == list[0] {
-            self.performSegue(withIdentifier: "toMap", sender: nil)
             //list[0]の地域だけの地図を表示
+            regionNumber = 0
             
+            self.performSegue(withIdentifier: "toMap", sender: textField.text)
             
         } else if textField.text == list[1] {
-            self.performSegue(withIdentifier: "toMap", sender: nil)
-            //横浜の地域だけの地図を表示
+            //指定した地域だけの地図を表示
             regionNumber = 1
+            
+            self.performSegue(withIdentifier: "toMap", sender: textField.text)
+          
+            
         } else if textField.text == list[2] {
-            self.performSegue(withIdentifier: "toMap", sender: nil)
-            //大阪の地域だけの地図を表示
+            //指定した地域だけの地図を表示
             regionNumber = 2
+            
+            self.performSegue(withIdentifier: "toMap", sender: textField.text)
+           
+            
         } else if textField.text == list[3] {
-            self.performSegue(withIdentifier: "toMap", sender: nil)
-            //京都の地域だけの地図を表示
+            //指定した地域だけの地図を表示
             regionNumber = 3
+            
+            self.performSegue(withIdentifier: "toMap", sender: textField.text)
+            
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMap" {
+            let navigation = segue.destination as! UINavigationController
+            let viewController = navigation.topViewController as! mapViewController
+            viewController.regionNumber2 = (sender as! String)
         }
     }
         
         
-    
-
+   
+    //let viewController = segue.destination as! mapViewController
+    //viewController.regionNumber2 = (sender as! String)
 
 }
 
