@@ -14,12 +14,11 @@
 		F944DFC52268E3BE00A6A45E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F944DFC32268E3BE00A6A45E /* LaunchScreen.storyboard */; };
 		F944DFD02268E3BE00A6A45E /* purinmapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944DFCF2268E3BE00A6A45E /* purinmapTests.swift */; };
 		F944DFDB2268E3BE00A6A45E /* purinmapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944DFDA2268E3BE00A6A45E /* purinmapUITests.swift */; };
-		F944DFED226B055500A6A45E /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = F944DFEC226B055500A6A45E /* map.png */; };
 		F944DFEF226F7CAA00A6A45E /* libraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944DFEE226F7CAA00A6A45E /* libraryViewController.swift */; };
-		F944DFF122709E3000A6A45E /* ojisan.png in Resources */ = {isa = PBXBuildFile; fileRef = F944DFF022709E3000A6A45E /* ojisan.png */; };
 		F944DFF32270BAA200A6A45E /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944DFF22270BAA200A6A45E /* mapViewController.swift */; };
 		F9A56AEC22757C30002EC792 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A56AEB22757C30002EC792 /* test.png */; };
-		F9B984AF2274B05700DF450A /* prin.png in Resources */ = {isa = PBXBuildFile; fileRef = F9B984AE2274B05700DF450A /* prin.png */; };
+		F9A56AEE2278A6FA002EC792 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A56AED2278A6FA002EC792 /* map.png */; };
+		F9A56AF02278A70F002EC792 /* prin.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A56AEF2278A70F002EC792 /* prin.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,12 +52,12 @@
 		F944DFD62268E3BE00A6A45E /* purinmapUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = purinmapUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F944DFDA2268E3BE00A6A45E /* purinmapUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = purinmapUITests.swift; sourceTree = "<group>"; };
 		F944DFDC2268E3BE00A6A45E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F944DFEC226B055500A6A45E /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map.png; path = ../../../Downloads/map.png; sourceTree = "<group>"; };
 		F944DFEE226F7CAA00A6A45E /* libraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libraryViewController.swift; sourceTree = "<group>"; };
-		F944DFF022709E3000A6A45E /* ojisan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ojisan.png; sourceTree = "<group>"; };
 		F944DFF22270BAA200A6A45E /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
 		F9A56AEB22757C30002EC792 /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
-		F9B984AE2274B05700DF450A /* prin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = prin.png; path = ../../prin.png; sourceTree = "<group>"; };
+		F9A56AED2278A6FA002EC792 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map.png; path = ../../../Downloads/map.png; sourceTree = "<group>"; };
+		F9A56AEF2278A70F002EC792 /* prin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = prin.png; path = ../../prin.png; sourceTree = "<group>"; };
+		F9A56AF3227A0A2F002EC792 /* purinmap.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = purinmap.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +92,7 @@
 				F944DFCE2268E3BE00A6A45E /* purinmapTests */,
 				F944DFD92268E3BE00A6A45E /* purinmapUITests */,
 				F944DFB82268E3BB00A6A45E /* Products */,
+				F9A56AF2227A0A2F002EC792 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,9 +114,8 @@
 				F944DFEE226F7CAA00A6A45E /* libraryViewController.swift */,
 				F944DFF22270BAA200A6A45E /* mapViewController.swift */,
 				F9A56AEB22757C30002EC792 /* test.png */,
-				F9B984AE2274B05700DF450A /* prin.png */,
-				F944DFEC226B055500A6A45E /* map.png */,
-				F944DFF022709E3000A6A45E /* ojisan.png */,
+				F9A56AEF2278A70F002EC792 /* prin.png */,
+				F9A56AED2278A6FA002EC792 /* map.png */,
 				F944DFBE2268E3BB00A6A45E /* Main.storyboard */,
 				F944DFC12268E3BE00A6A45E /* Assets.xcassets */,
 				F944DFC32268E3BE00A6A45E /* LaunchScreen.storyboard */,
@@ -143,6 +142,19 @@
 			path = purinmapUITests;
 			sourceTree = "<group>";
 		};
+		F9A56AF2227A0A2F002EC792 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9A56AF3227A0A2F002EC792 /* purinmap.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9A56AF4227A0A2F002EC792 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,6 +165,7 @@
 				F944DFB32268E3BB00A6A45E /* Sources */,
 				F944DFB42268E3BB00A6A45E /* Frameworks */,
 				F944DFB52268E3BB00A6A45E /* Resources */,
+				F9A56AF1227A096B002EC792 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -233,6 +246,12 @@
 			mainGroup = F944DFAE2268E3BB00A6A45E;
 			productRefGroup = F944DFB82268E3BB00A6A45E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F9A56AF4227A0A2F002EC792 /* Products */;
+					ProjectRef = F9A56AF3227A0A2F002EC792 /* purinmap.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F944DFB62268E3BB00A6A45E /* purinmap */,
@@ -247,13 +266,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9A56AEE2278A6FA002EC792 /* map.png in Resources */,
 				F944DFC52268E3BE00A6A45E /* LaunchScreen.storyboard in Resources */,
+				F9A56AF02278A70F002EC792 /* prin.png in Resources */,
 				F944DFC22268E3BE00A6A45E /* Assets.xcassets in Resources */,
 				F9A56AEC22757C30002EC792 /* test.png in Resources */,
-				F9B984AF2274B05700DF450A /* prin.png in Resources */,
-				F944DFF122709E3000A6A45E /* ojisan.png in Resources */,
 				F944DFC02268E3BB00A6A45E /* Main.storyboard in Resources */,
-				F944DFED226B055500A6A45E /* map.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +290,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F9A56AF1227A096B002EC792 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F944DFB32268E3BB00A6A45E /* Sources */ = {
