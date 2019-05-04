@@ -11,12 +11,9 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
     var regionNumber2: String?
     //LocationManagerの取得
     let myLocationManager = CLLocationManager()
-//    @IBOutlet var MapView: MKMapView!
+
     let myMapView = MKMapView()
     
-//    @IBAction func modoru() {
-//        self.dismiss(animated: true, completion: nil)
-//    }
     
     @IBAction func returnView() {
         self.dismiss(animated: true, completion: nil)
@@ -78,7 +75,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         let mySpan = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         var myRegion = MKCoordinateRegion(center: currentLocation, span: mySpan)
         
-        var number: String = regionNumber2!
+        let number: String = regionNumber2!
         
         if number == "現在地" {
             
