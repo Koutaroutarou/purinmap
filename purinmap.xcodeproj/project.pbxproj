@@ -22,6 +22,8 @@
 		F9A56AEC22757C30002EC792 /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A56AEB22757C30002EC792 /* test.png */; };
 		F9A56AEE2278A6FA002EC792 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A56AED2278A6FA002EC792 /* map.png */; };
 		F9A56AF02278A70F002EC792 /* prin.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A56AEF2278A70F002EC792 /* prin.png */; };
+		F9A56AFE227EA285002EC792 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9A56AFC227EA285002EC792 /* Model.xcdatamodeld */; };
+		F9A56B3E227F37A3002EC792 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A56B3D227F37A3002EC792 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		F9A56AED2278A6FA002EC792 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = map.png; path = ../../../Downloads/map.png; sourceTree = "<group>"; };
 		F9A56AEF2278A70F002EC792 /* prin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = prin.png; path = ../../prin.png; sourceTree = "<group>"; };
 		F9A56AF3227A0A2F002EC792 /* purinmap.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = purinmap.xcodeproj; sourceTree = "<group>"; };
+		F9A56AFD227EA285002EC792 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		F9A56B3D227F37A3002EC792 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +114,6 @@
 				2582DE265AF67B4C8D1AB976 /* Pods-purinmapUITests.debug.xcconfig */,
 				99780C56DC873EB915AE1ED2 /* Pods-purinmapUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -143,6 +146,7 @@
 				F944DFBC2268E3BB00A6A45E /* ViewController.swift */,
 				F944DFEE226F7CAA00A6A45E /* libraryViewController.swift */,
 				F944DFF22270BAA200A6A45E /* mapViewController.swift */,
+				F9A56AFC227EA285002EC792 /* Model.xcdatamodeld */,
 				F9A56AEB22757C30002EC792 /* test.png */,
 				F9A56AEF2278A70F002EC792 /* prin.png */,
 				F9A56AED2278A6FA002EC792 /* map.png */,
@@ -150,6 +154,7 @@
 				F944DFC12268E3BE00A6A45E /* Assets.xcassets */,
 				F944DFC32268E3BE00A6A45E /* LaunchScreen.storyboard */,
 				F944DFC62268E3BE00A6A45E /* Info.plist */,
+				F9A56B3D227F37A3002EC792 /* DataController.swift */,
 			);
 			path = purinmap;
 			sourceTree = "<group>";
@@ -403,7 +408,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F944DFEF226F7CAA00A6A45E /* libraryViewController.swift in Sources */,
+				F9A56B3E227F37A3002EC792 /* DataController.swift in Sources */,
 				F944DFBD2268E3BB00A6A45E /* ViewController.swift in Sources */,
+				F9A56AFE227EA285002EC792 /* Model.xcdatamodeld in Sources */,
 				F944DFBB2268E3BB00A6A45E /* AppDelegate.swift in Sources */,
 				F944DFF32270BAA200A6A45E /* mapViewController.swift in Sources */,
 			);
@@ -746,6 +753,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F9A56AFC227EA285002EC792 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F9A56AFD227EA285002EC792 /* Model.xcdatamodel */,
+			);
+			currentVersion = F9A56AFD227EA285002EC792 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = ../Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F944DFAF2268E3BB00A6A45E /* Project object */;
 }

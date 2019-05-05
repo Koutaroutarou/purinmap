@@ -19,6 +19,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         self.dismiss(animated: true, completion: nil)
     }
     
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,12 +53,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         myLocationManager.startUpdatingLocation()
         print("現在地取得なう")
         
-        
     }
-    
-    
-    
-    
     
     
     //現在地の取得に成功した場合の処理

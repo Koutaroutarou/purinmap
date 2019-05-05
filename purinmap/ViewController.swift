@@ -108,10 +108,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
         
-        
-   
-    //let viewController = segue.destination as! mapViewController
-    //viewController.regionNumber2 = (sender as! String)
+    
 
 }
 
