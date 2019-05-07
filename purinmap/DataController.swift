@@ -12,6 +12,8 @@ import CoreData
 class DataManager {
     
     
+    
+    
     static let shared: DataManager = DataManager()
     
     private var persistentContainer: NSPersistentContainer!
@@ -54,7 +56,7 @@ class DataManager {
         
         let context = persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<T>(entityName: String(describing: T.self))
-        fetchRequest.sortDescriptors = descriptor.map { NSSortDescriptor(key: &0, ascending: true) }
+        fetchRequest.sortDescriptors = descriptor.map { NSSortDescriptor(key: $0, ascending: true) }
         
         return NSFetchedResultsController<T>(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
     }

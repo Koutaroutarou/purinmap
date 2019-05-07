@@ -8,9 +8,16 @@
 
 import UIKit
 
-class libraryViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class libraryViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate,UITextFieldDelegate {
     
     @IBOutlet var storeName: UITextField!
+    
+    
+    //追加したところ
+    var testText: String = "default"
+    var reviewArray: [Dictionary<String, String>] = []
+    let userDefaults = UserDefaults.standard
+    //ここまで↑
     
     var tap: Int = 0
     
@@ -53,11 +60,75 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
     //写真表示ようImageView
     @IBOutlet var imageView: UIImageView!
     
+    
+    
+    @IBAction func saveData() {
+        let reviewDictionary = ["store": storeName.text!, "input": inputText.text!]
+        
+        reviewArray.append(reviewDictionary)
+        userDefaults.set(reviewArray, forKey: "REVIEW")
+        
+        storeName.text = ""
+        inputText.text = ""
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
+//追加した部分↓
+        //教科書追加↓
+        
+        if userDefaults.array(forKey: "REVIEW") != nil {
+            
+            reviewArray = userDefaults.array(forKey: "REVIEW") as! [Dictionary<String, String>]
+        }
+        
+        
+        
+        storeName.delegate = self
+        
+        userDefaults.register(defaults: ["DataStore": "default"])
+        
+        storeName.text = readData()
+        
+        
     }
+    
+    func readData() -> String {
+        
+        let str: String = userDefaults.object(forKey: "DataStore") as! String
+        
+        return str
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        testText = storeName.text!
+        storeName.text = testText
+        
+        storeName.resignFirstResponder()
+        
+        saveData(str: testText)
+        
+        return true
+        
+    }
+    
+    func saveData(str: String) {
+        
+        
+        userDefaults.set(str, forKey: "DataStore")
+    }
+    
+    //↑ここまで追加
+    
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
        super.didReceiveMemoryWarning()
     }

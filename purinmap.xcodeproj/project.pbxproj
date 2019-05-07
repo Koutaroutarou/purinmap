@@ -144,8 +144,8 @@
 			children = (
 				F944DFBA2268E3BB00A6A45E /* AppDelegate.swift */,
 				F944DFBC2268E3BB00A6A45E /* ViewController.swift */,
-				F944DFEE226F7CAA00A6A45E /* libraryViewController.swift */,
 				F944DFF22270BAA200A6A45E /* mapViewController.swift */,
+				F944DFEE226F7CAA00A6A45E /* libraryViewController.swift */,
 				F9A56AFC227EA285002EC792 /* Model.xcdatamodeld */,
 				F9A56AEB22757C30002EC792 /* test.png */,
 				F9A56AEF2278A70F002EC792 /* prin.png */,

@@ -217,6 +217,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="saveData" destination="JL0-1f-Vqr" eventType="touchUpInside" id="9M5-32-SkB"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="コメント" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LBe-7H-wCD">
                                 <rect key="frame" x="40" y="589" width="277" height="138"/>
