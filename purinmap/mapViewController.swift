@@ -14,6 +14,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
 
     let myMapView = MKMapView()
     
+    let userDefaults = UserDefaults.standard
     
     @IBAction func returnView() {
         self.dismiss(animated: true, completion: nil)
@@ -27,6 +28,14 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
   //MapViewを生成し、表示する
         myMapView.frame = self.view.frame
         self.view.addSubview(myMapView)
+        
+       
+        //開いた時に保存されているピンを出したい
+        
+//        let getpin = userDefaults.array(forKey: "pinLocation") as! CLLocation?
+//        let pin = MKPointAnnotation()
+//
+//        var getPinPoint = getpin?.coordinate
 
    //長押しを探知する機能を追加
         //ジェスチャーを生成
@@ -153,6 +162,10 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         //senderから長押しした地図上の座標を取得
         let tappedLocation = sender.location(in: myMapView)
         let tappedPoint = myMapView.convert(tappedLocation, toCoordinateFrom: myMapView)
+//
+//        userDefaults.set(tappedLocation, forKey: "pinLocation")
+        
+        
         
         print("long pressed")
         //ピンの生成
