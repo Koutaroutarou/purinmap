@@ -11,12 +11,9 @@ import RealmSwift
 
 class libraryViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate,UITextFieldDelegate {
     
-    var receiveLatitude: Double = 0.0
-    var receiveLongitude: Double = 0.0
-    
-    
-    
-    
+    //前のビューから受け取る箱を用意
+    var receiveLatitude: Double!
+    var receiveLongitude: Double!
     
     
     @IBOutlet var storeName: UITextField!
@@ -38,10 +35,11 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
         
         try!realm.write{
             realm.add(pudding)
-            
-        }
+            }
         storeName.text = ""
         inputText.text = ""
+        
+        print("保存されました")
     }
     
     

@@ -39,11 +39,18 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
        
         //開いた時に保存されているピンを出したい
 //for文を使って配列にある番号を全部繰り返してこの処理をすることで保存されている分だけのピンが生成できるのではないか？？
-        puddingArray = realm.objects(PuddingList.self)
-        let getPin = MKPointAnnotation()
-        let getTappedLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(puddingArray[0].shopLatitude, puddingArray[0].shopLongitude)
-        getPin.coordinate = getTappedLocation
-        getPin.title = puddingArray[0].shopName
+        
+        if puddingArray != nil {
+            
+            puddingArray = realm.objects(PuddingList.self)
+            let getPin = MKPointAnnotation()
+            let getTappedLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(puddingArray[0].shopLatitude, puddingArray[0].shopLongitude)
+            getPin.coordinate = getTappedLocation
+            getPin.title = puddingArray[0].shopName
+            self.myMapView.addAnnotation(getPin)
+            
+          
+        }
         
 
         
@@ -175,8 +182,11 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         let tappedLocation = sender.location(in: myMapView)
         let tappedPoint = myMapView.convert(tappedLocation, toCoordinateFrom: myMapView)
         
+    
         tappedLatitude = tappedPoint.latitude
         tappedLongitude = tappedPoint.longitude
+        
+        print("\(tappedLatitude!),\(tappedLongitude!)")
         
         
 //
@@ -265,6 +275,9 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
             
             LibraryViewController.receiveLatitude = self.tappedLatitude
             LibraryViewController.receiveLongitude = self.tappedLongitude
+            
+            print("値の受け渡し完了")
+             
         }
     }
     
