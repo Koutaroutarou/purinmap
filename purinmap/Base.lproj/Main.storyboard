@@ -95,7 +95,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="JL0-1f-Vqr" kind="presentation" identifier="toRegister" id="QXJ-T4-6wC"/>
+                        <segue destination="JL0-1f-Vqr" kind="presentation" identifier="toRegister" id="cBo-sn-aY9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="seP-Hy-u7i" userLabel="First Responder" sceneMemberID="firstResponder"/>

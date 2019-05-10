@@ -38,12 +38,12 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         
        
         //開いた時に保存されているピンを出したい
-        
+//for文を使って配列にある番号を全部繰り返してこの処理をすることで保存されている分だけのピンが生成できるのではないか？？
         puddingArray = realm.objects(PuddingList.self)
-        let pin = MKPointAnnotation()
-        let tappedLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(puddingArray[0].shopLatitude, puddingArray[0].shopLongitude)
-        pin.coordinate = tappedLocation
-        pin.title = puddingArray[0].shopName
+        let getPin = MKPointAnnotation()
+        let getTappedLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(puddingArray[0].shopLatitude, puddingArray[0].shopLongitude)
+        getPin.coordinate = getTappedLocation
+        getPin.title = puddingArray[0].shopName
         
 
         
@@ -238,19 +238,22 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
             mapView.deselectAnnotation(annotation, animated: true)
         }
         
-        //ストーリーボードの名前を指定
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        //viewにつけた名前を設定
-        let vc = storyboard.instantiateViewController(withIdentifier: "library")
-        //popoverを設定する
-        vc.modalPresentationStyle = UIModalPresentationStyle.popover
+        //segueを使って画面遷移
         
-        //間違っているかも？
-        present(vc, animated: true, completion: nil)
-        
-        let popoverPresentationController = vc.popoverPresentationController
-        popoverPresentationController?.sourceView = view
-        popoverPresentationController?.sourceRect = view.bounds
+        self.performSegue(withIdentifier: "toRegister", sender: nil)
+//        //ストーリーボードの名前を指定
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        //viewにつけた名前を設定
+//        let vc = storyboard.instantiateViewController(withIdentifier: "library")
+//        //popoverを設定する
+//        vc.modalPresentationStyle = UIModalPresentationStyle.popover
+//
+//        //間違っているかも？
+//        present(vc, animated: true, completion: nil)
+//
+//        let popoverPresentationController = vc.popoverPresentationController
+//        popoverPresentationController?.sourceView = view
+//        popoverPresentationController?.sourceRect = view.bounds
         
         
     }
