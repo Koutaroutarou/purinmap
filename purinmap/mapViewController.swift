@@ -3,9 +3,13 @@ import UIKit
 import MapKit
 //現在地取得のためのインポート
 import CoreLocation
+import RealmSwift
 
 
 class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDelegate {
+    
+    var tappedLatitude: Double!
+    var tappedLongitude: Double!
     
     
     var regionNumber2: String?
@@ -20,22 +24,30 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         self.dismiss(animated: true, completion: nil)
     }
     
+    let realm = try!Realm()
+    
+    var puddingArray: Results<PuddingList>!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-  //MapViewを生成し、表示する
+    //MapViewを生成し、表示する
         myMapView.frame = self.view.frame
         self.view.addSubview(myMapView)
         
        
         //開いた時に保存されているピンを出したい
         
-//        let getpin = userDefaults.array(forKey: "pinLocation") as! CLLocation?
-//        let pin = MKPointAnnotation()
-//
-//        var getPinPoint = getpin?.coordinate
+        puddingArray = realm.objects(PuddingList.self)
+        let pin = MKPointAnnotation()
+        let tappedLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(puddingArray[0].shopLatitude, puddingArray[0].shopLongitude)
+        pin.coordinate = tappedLocation
+        pin.title = puddingArray[0].shopName
+        
+
+        
+        
 
    //長押しを探知する機能を追加
         //ジェスチャーを生成
@@ -162,8 +174,18 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         //senderから長押しした地図上の座標を取得
         let tappedLocation = sender.location(in: myMapView)
         let tappedPoint = myMapView.convert(tappedLocation, toCoordinateFrom: myMapView)
+        
+        tappedLatitude = tappedPoint.latitude
+        tappedLongitude = tappedPoint.longitude
+        
+        
 //
-//        userDefaults.set(tappedLocation, forKey: "pinLocation")
+      //  userDefaults.set(tappedLocation, forKey: "pinLocation")
+        
+        let location: [CLLocation] = []
+        
+        let locationData = NSKeyedArchiver.archivedData(withRootObject: location)
+        UserDefaults.standard.set(locationData, forKey: "locationData")
         
         
         
@@ -233,9 +255,14 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         
     }
     
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toRegister" {
+            
+            let LibraryViewController: libraryViewController = segue.destination as! libraryViewController
+            
+            LibraryViewController.receiveLatitude = self.tappedLatitude
+            LibraryViewController.receiveLongitude = self.tappedLongitude
+        }
     }
     
 
