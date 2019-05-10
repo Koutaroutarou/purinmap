@@ -218,7 +218,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="saveData" destination="JL0-1f-Vqr" eventType="touchUpInside" id="9M5-32-SkB"/>
+                                    <action selector="register:" destination="JL0-1f-Vqr" eventType="touchUpInside" id="2hO-bI-Nh0"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="コメント" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LBe-7H-wCD">

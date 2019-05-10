@@ -24,6 +24,11 @@
 		F9A56AF02278A70F002EC792 /* prin.png in Resources */ = {isa = PBXBuildFile; fileRef = F9A56AEF2278A70F002EC792 /* prin.png */; };
 		F9A56AFE227EA285002EC792 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9A56AFC227EA285002EC792 /* Model.xcdatamodeld */; };
 		F9A56B3E227F37A3002EC792 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A56B3D227F37A3002EC792 /* DataController.swift */; };
+		F9A56B422284445B002EC792 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A56B412284445B002EC792 /* Realm.framework */; };
+		F9A56B432284445B002EC792 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9A56B412284445B002EC792 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F9A56B4622844469002EC792 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A56B4522844469002EC792 /* RealmSwift.framework */; };
+		F9A56B4722844469002EC792 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9A56B4522844469002EC792 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F9A56B4B22844CA0002EC792 /* RealmFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A56B4A22844CA0002EC792 /* RealmFile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +47,21 @@
 			remoteInfo = purinmap;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F9A56B442284445B002EC792 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F9A56B4722844469002EC792 /* RealmSwift.framework in Embed Frameworks */,
+				F9A56B432284445B002EC792 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		022640F6A00D8E69E6FC62D7 /* Pods-purinmapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-purinmapTests.release.xcconfig"; path = "Target Support Files/Pods-purinmapTests/Pods-purinmapTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +94,9 @@
 		F9A56AF3227A0A2F002EC792 /* purinmap.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = purinmap.xcodeproj; sourceTree = "<group>"; };
 		F9A56AFD227EA285002EC792 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		F9A56B3D227F37A3002EC792 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		F9A56B412284445B002EC792 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		F9A56B4522844469002EC792 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		F9A56B4A22844CA0002EC792 /* RealmFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmFile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +104,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9A56B422284445B002EC792 /* Realm.framework in Frameworks */,
 				E017FED4AA54489D562BB7B1 /* Pods_purinmap.framework in Frameworks */,
+				F9A56B4622844469002EC792 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +145,8 @@
 		F944DFAE2268E3BB00A6A45E = {
 			isa = PBXGroup;
 			children = (
+				F9A56B4522844469002EC792 /* RealmSwift.framework */,
+				F9A56B412284445B002EC792 /* Realm.framework */,
 				F944DFB92268E3BB00A6A45E /* purinmap */,
 				F944DFCE2268E3BE00A6A45E /* purinmapTests */,
 				F944DFD92268E3BE00A6A45E /* purinmapUITests */,
@@ -142,6 +169,7 @@
 		F944DFB92268E3BB00A6A45E /* purinmap */ = {
 			isa = PBXGroup;
 			children = (
+				F9A56B4A22844CA0002EC792 /* RealmFile.swift */,
 				F944DFBA2268E3BB00A6A45E /* AppDelegate.swift */,
 				F944DFBC2268E3BB00A6A45E /* ViewController.swift */,
 				F944DFF22270BAA200A6A45E /* mapViewController.swift */,
@@ -206,6 +234,8 @@
 				F944DFB32268E3BB00A6A45E /* Sources */,
 				F944DFB42268E3BB00A6A45E /* Frameworks */,
 				F944DFB52268E3BB00A6A45E /* Resources */,
+				F9A56B442284445B002EC792 /* Embed Frameworks */,
+				F9A56B48228447FF002EC792 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -400,6 +430,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F9A56B48228447FF002EC792 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nbash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -410,6 +457,7 @@
 				F944DFEF226F7CAA00A6A45E /* libraryViewController.swift in Sources */,
 				F9A56B3E227F37A3002EC792 /* DataController.swift in Sources */,
 				F944DFBD2268E3BB00A6A45E /* ViewController.swift in Sources */,
+				F9A56B4B22844CA0002EC792 /* RealmFile.swift in Sources */,
 				F9A56AFE227EA285002EC792 /* Model.xcdatamodeld in Sources */,
 				F944DFBB2268E3BB00A6A45E /* AppDelegate.swift in Sources */,
 				F944DFF32270BAA200A6A45E /* mapViewController.swift in Sources */,
@@ -591,6 +639,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9PRS99ML5M;
+				FRAMEWORK_SEARCH_PATHS = /Users/watanabekoutarou/Desktop/purinmap;
 				INFOPLIST_FILE = purinmap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -601,7 +650,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -613,6 +662,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9PRS99ML5M;
+				FRAMEWORK_SEARCH_PATHS = /Users/watanabekoutarou/Desktop/purinmap;
 				INFOPLIST_FILE = purinmap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -623,7 +673,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -635,6 +685,14 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9PRS99ML5M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RealmSwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxRelay\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxSwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Realm\"",
+				);
 				INFOPLIST_FILE = purinmapTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -657,6 +715,14 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9PRS99ML5M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RealmSwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxRelay\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxSwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Realm\"",
+				);
 				INFOPLIST_FILE = purinmapTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -4,9 +4,6 @@
 target 'purinmap' do
  
   use_frameworks!
- pod 'RealmSwift'
-
-  # Pods for purinmap
 
   target 'purinmapTests' do
     inherit! :search_paths

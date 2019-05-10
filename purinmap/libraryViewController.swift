@@ -7,10 +7,43 @@
 //
 
 import UIKit
+import RealmSwift
 
 class libraryViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate,UITextFieldDelegate {
     
+    var receiveLatitude: Double = 0.0
+    var receiveLongitude: Double = 0.0
+    
+    
+    
+    
+    
+    
     @IBOutlet var storeName: UITextField!
+    
+    //Realm保存機能
+    let realm = try! Realm()
+    var pudding = PuddingList()
+    
+    @IBAction func register(_ sender: Any) {
+        
+        pudding.shopName = storeName.text!
+        pudding.commnet = inputText.text!
+        pudding.reviewStarRealm = reviewStar.text!
+        pudding.review = reviewLabel.text!
+        pudding.shopLatitude = receiveLatitude
+        pudding.shopLongitude = receiveLongitude
+        
+//  写真の保存      pudding.imageData =
+        
+        try!realm.write{
+            realm.add(pudding)
+            
+        }
+        storeName.text = ""
+        inputText.text = ""
+    }
+    
     
     
     //追加したところ
@@ -62,67 +95,62 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
     
     
     
-    @IBAction func saveData() {
-        let reviewDictionary = ["store": storeName.text!, "input": inputText.text!]
-        
-        reviewArray.append(reviewDictionary)
-        userDefaults.set(reviewArray, forKey: "REVIEW")
-        
-        storeName.text = ""
-        inputText.text = ""
-        
-    }
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
         
 //追加した部分↓
         //教科書追加↓
-        
-        if userDefaults.array(forKey: "REVIEW") != nil {
-            
-            reviewArray = userDefaults.array(forKey: "REVIEW") as! [Dictionary<String, String>]
-        }
-        
-        
-        
-        storeName.delegate = self
-        
-        userDefaults.register(defaults: ["DataStore": "default"])
-        
-        storeName.text = readData()
-        
-        
-    }
-    
-    func readData() -> String {
-        
-        let str: String = userDefaults.object(forKey: "DataStore") as! String
-        
-        return str
-        
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        testText = storeName.text!
-        storeName.text = testText
-        
-        storeName.resignFirstResponder()
-        
-        saveData(str: testText)
-        
-        return true
-        
-    }
-    
-    func saveData(str: String) {
-        
-        
-        userDefaults.set(str, forKey: "DataStore")
-    }
-    
+//
+//        if userDefaults.array(forKey: "REVIEW") != nil {
+//
+//            reviewArray = userDefaults.array(forKey: "REVIEW") as! [Dictionary<String, String>]
+//        }
+//
+//
+//
+//        storeName.delegate = self
+//
+//        userDefaults.register(defaults: ["DataStore": "default"])
+//
+//        storeName.text = readData()
+//
+//
+//
+//
+//
+//    }
+//
+//    func readData() -> String {
+//
+//        let str: String = userDefaults.object(forKey: "DataStore") as! String
+//
+//        return str
+//
+//    }
+//
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//
+//        testText = storeName.text!
+//        storeName.text = testText
+//
+//        storeName.resignFirstResponder()
+//
+//        saveData(str: testText)
+//
+//        return true
+//
+//    }
+//
+//    func saveData(str: String) {
+//
+//
+//        userDefaults.set(str, forKey: "DataStore")
+//    }
+//
     //↑ここまで追加
     
     
