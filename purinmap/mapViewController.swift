@@ -5,17 +5,25 @@ import MapKit
 import CoreLocation
 import RealmSwift
 
+class CustomAnnotation: MKPointAnnotation {
+    var tag: Int?
+}
+
 
 class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDelegate {
     
     var tappedLatitude: Double!
     var tappedLongitude: Double!
+    var getShopName: String!
+    var getComment: String!
+    var getReview: String!
+    var getReviewStar: String!
     
     
     var regionNumber2: String?
     //LocationManagerの取得
     let myLocationManager = CLLocationManager()
-
+    
     let myMapView = MKMapView()
     
     let userDefaults = UserDefaults.standard
@@ -28,35 +36,59 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
     
     var puddingArray: Results<PuddingList>!
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("viewWillAppear")
         
-    //MapViewを生成し、表示する
-        myMapView.frame = self.view.frame
-        self.view.addSubview(myMapView)
-        
-       
-        //開いた時に保存されているピンを出したい
-//for文を使って配列にある番号を全部繰り返してこの処理をすることで保存されている分だけのピンが生成できるのではないか？？
+        puddingArray = realm.objects(PuddingList.self)
         
         if puddingArray != nil {
             
-            puddingArray = realm.objects(PuddingList.self)
-            let getPin = MKPointAnnotation()
-            let getTappedLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(puddingArray[0].shopLatitude, puddingArray[0].shopLongitude)
-            getPin.coordinate = getTappedLocation
-            getPin.title = puddingArray[0].shopName
-            self.myMapView.addAnnotation(getPin)
+            for i in 0..<puddingArray.count {
+                
+                let getPin = CustomAnnotation()
+                let getTappedLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(puddingArray[i].shopLatitude, puddingArray[i].shopLongitude)
+                getPin.coordinate = getTappedLocation
+                getPin.title = puddingArray[i].shopName
+                getPin.tag = i
+                self.myMapView.addAnnotation(getPin)
             
-          
+           
+            }
         }
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-
+        
+        //MapViewを生成し、表示する
+        myMapView.frame = self.view.frame
+        self.view.addSubview(myMapView)
         
         
-
-   //長押しを探知する機能を追加
+        //開いた時に保存されているピンを出したい
+        //for文を使って配列にある番号を全部繰り返してこの処理をすることで保存されている分だけのピンが生成できるのではないか？？
+        
+        //        if puddingArray != nil {
+        //
+        //            puddingArray = realm.objects(PuddingList.self)
+        //            let getPin = MKPointAnnotation()
+        //            let getTappedLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(puddingArray[0].shopLatitude, puddingArray[0].shopLongitude)
+        //            getPin.coordinate = getTappedLocation
+        //            getPin.title = puddingArray[0].shopName
+        //            self.myMapView.addAnnotation(getPin)
+        //
+        //        }
+        
+        
+        
+        
+        
+        //長押しを探知する機能を追加
         //ジェスチャーを生成
         let longPressGesture = UILongPressGestureRecognizer()
         //ボタンを押した時の処理
@@ -128,7 +160,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
             
             //ピンを表示
             self.myMapView.addAnnotation(pin)
-
+            
         } else if number == "横浜" {
             
             //横浜駅中心で地図を表示
@@ -170,33 +202,33 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
     
     //長押しした時にピンを置く処理
     @objc func longPressed(sender: UILongPressGestureRecognizer) {
-         print("long pressed")
+        print("long pressed")
         
         //この処理を書くことにより、指を離した時だけ反応するようにする
         if sender.state != UIGestureRecognizer.State.began {
             return
         }
-
-     
+        
+        
         //senderから長押しした地図上の座標を取得
         let tappedLocation = sender.location(in: myMapView)
         let tappedPoint = myMapView.convert(tappedLocation, toCoordinateFrom: myMapView)
         
-    
+        
         tappedLatitude = tappedPoint.latitude
         tappedLongitude = tappedPoint.longitude
         
         print("\(tappedLatitude!),\(tappedLongitude!)")
         
         
+        //
+        //  userDefaults.set(tappedLocation, forKey: "pinLocation")
+        
+//        let location: [CLLocation] = []
 //
-      //  userDefaults.set(tappedLocation, forKey: "pinLocation")
-        
-        let location: [CLLocation] = []
-        
-        let locationData = NSKeyedArchiver.archivedData(withRootObject: location)
-        UserDefaults.standard.set(locationData, forKey: "locationData")
-        
+//        let locationData = NSKeyedArchiver.archivedData(withRootObject: location)
+//        UserDefaults.standard.set(locationData, forKey: "locationData")
+//
         
         
         print("long pressed")
@@ -207,9 +239,9 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         //ピンのタイトルの設定
         pin.title = "タイトル"
         //ピンのサブタイトルの設定
-//        pin.subtitle = "サブタイトル"
+        //        pin.subtitle = "サブタイトル"
         //ピンの画像の設定
-    
+        
         //ピンをMapViewの上に置く
         self.myMapView.addAnnotation(pin)
         
@@ -238,7 +270,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         }
         return myAnnotationView
     }
- 
+    
     
     //ボタンを押された時
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
@@ -248,22 +280,40 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
             mapView.deselectAnnotation(annotation, animated: true)
         }
         
+        if let tag = (view.annotation as? CustomAnnotation)?.tag {
+            getShopName = puddingArray[tag].shopName
+            getComment = puddingArray[tag].commnet
+            getReview = puddingArray[tag].review
+            getReviewStar = puddingArray[tag].reviewStarRealm
+        } else {
+            getShopName = ""
+            getComment = ""
+            getReview = "0.0"
+            getReviewStar = "☆ ☆ ☆ ☆ ☆"
+        }
+        
+        
+        
+        
+        
+        
+        
         //segueを使って画面遷移
         
         self.performSegue(withIdentifier: "toRegister", sender: nil)
-//        //ストーリーボードの名前を指定
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        //viewにつけた名前を設定
-//        let vc = storyboard.instantiateViewController(withIdentifier: "library")
-//        //popoverを設定する
-//        vc.modalPresentationStyle = UIModalPresentationStyle.popover
-//
-//        //間違っているかも？
-//        present(vc, animated: true, completion: nil)
-//
-//        let popoverPresentationController = vc.popoverPresentationController
-//        popoverPresentationController?.sourceView = view
-//        popoverPresentationController?.sourceRect = view.bounds
+        //        //ストーリーボードの名前を指定
+        //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //        //viewにつけた名前を設定
+        //        let vc = storyboard.instantiateViewController(withIdentifier: "library")
+        //        //popoverを設定する
+        //        vc.modalPresentationStyle = UIModalPresentationStyle.popover
+        //
+        //        //間違っているかも？
+        //        present(vc, animated: true, completion: nil)
+        //
+        //        let popoverPresentationController = vc.popoverPresentationController
+        //        popoverPresentationController?.sourceView = view
+        //        popoverPresentationController?.sourceRect = view.bounds
         
         
     }
@@ -275,11 +325,15 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
             
             LibraryViewController.receiveLatitude = self.tappedLatitude
             LibraryViewController.receiveLongitude = self.tappedLongitude
+            LibraryViewController.receiveShopName = self.getShopName
+            LibraryViewController.receiveComment = self.getComment
+            LibraryViewController.receiveReview = self.getReview
+            LibraryViewController.receiveReviewStar = self.getReviewStar
             
             print("値の受け渡し完了")
-             
+            
         }
     }
     
-
+    
 }

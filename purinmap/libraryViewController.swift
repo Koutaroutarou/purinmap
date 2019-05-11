@@ -14,6 +14,11 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
     //前のビューから受け取る箱を用意
     var receiveLatitude: Double!
     var receiveLongitude: Double!
+    var receiveShopName: String!
+    var receiveComment: String!
+    var receiveReview: String!
+    var receiveReviewStar: String!
+    
     
     
     @IBOutlet var storeName: UITextField!
@@ -28,8 +33,9 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
         pudding.commnet = inputText.text!
         pudding.reviewStarRealm = reviewStar.text!
         pudding.review = reviewLabel.text!
-        pudding.shopLatitude = receiveLatitude
-        pudding.shopLongitude = receiveLongitude
+        pudding.shopLatitude = receiveLatitude!
+        pudding.shopLongitude = receiveLongitude!
+        
         
 //  写真の保存      pudding.imageData =
         
@@ -40,6 +46,7 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
         inputText.text = ""
         
         print("保存されました")
+        print("\(pudding.shopLatitude),\(pudding.shopLongitude)")
     }
     
     
@@ -97,6 +104,12 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        storeName.text = receiveShopName
+        inputText.text = receiveComment
+        reviewStar.text = receiveReviewStar
+        reviewLabel.text = receiveReview
+        
         
     }
         
