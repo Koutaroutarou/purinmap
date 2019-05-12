@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "purinmap/RealmFile.swift"
+            timestampString = "579252330.093348"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "PuddingList"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "purinmap.PuddingList.commnet.getter : Swift.String"
+                  moduleName = "purinmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/watanabekoutarou/Desktop/purinmap/purinmap/RealmFile.swift"
+                  timestampString = "579252331.368536"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "purinmap.PuddingList.commnet.setter : Swift.String"
+                  moduleName = "purinmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/watanabekoutarou/Desktop/purinmap/purinmap/RealmFile.swift"
+                  timestampString = "579252331.3703589"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "purinmap.PuddingList.init() -&gt; purinmap.PuddingList"
+                  moduleName = "purinmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/watanabekoutarou/Desktop/purinmap/purinmap/RealmFile.swift"
+                  timestampString = "579252331.372079"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "purinmap.PuddingList.init(value: Any) -&gt; purinmap.PuddingList"
+                  moduleName = "purinmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/watanabekoutarou/Desktop/purinmap/purinmap/RealmFile.swift"
+                  timestampString = "579252331.3736989"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "purinmap.PuddingList.init(realm: __C.RLMRealm, schema: __C.RLMObjectSchema) -&gt; purinmap.PuddingList"
+                  moduleName = "purinmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/watanabekoutarou/Desktop/purinmap/purinmap/RealmFile.swift"
+                  timestampString = "579252331.37524"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "256">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "purinmap.PuddingList.init(value: Any, schema: __C.RLMSchema) -&gt; purinmap.PuddingList"
+                  moduleName = "purinmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/watanabekoutarou/Desktop/purinmap/purinmap/RealmFile.swift"
+                  timestampString = "579252331.376801"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "260">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "purinmap/libraryViewController.swift"
+            timestampString = "579274587.7560509"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "libraryViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "purinmap.libraryViewController.receiveLatitude.getter : Swift.Optional&lt;Swift.Double&gt;"
+                  moduleName = "purinmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/watanabekoutarou/Desktop/purinmap/purinmap/libraryViewController.swift"
+                  timestampString = "579252331.49824"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "purinmap.libraryViewController.receiveLatitude.setter : Swift.Optional&lt;Swift.Double&gt;"
+                  moduleName = "purinmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/watanabekoutarou/Desktop/purinmap/purinmap/libraryViewController.swift"
+                  timestampString = "579252331.500416"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "208">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "purinmap.libraryViewController.receiveLatitude.modify : Swift.Optional&lt;Swift.Double&gt;"
+                  moduleName = "purinmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/watanabekoutarou/Desktop/purinmap/purinmap/libraryViewController.swift"
+                  timestampString = "579252331.50257"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "purinmap.libraryViewController.receiveLatitude.modify : Swift.Optional&lt;Swift.Double&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "purinmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/watanabekoutarou/Desktop/purinmap/purinmap/libraryViewController.swift"
+                  timestampString = "579252331.504654"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "purinmap.libraryViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; purinmap.libraryViewController"
+                  moduleName = "purinmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/watanabekoutarou/Desktop/purinmap/purinmap/libraryViewController.swift"
+                  timestampString = "579252331.50683"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "purinmap.libraryViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;purinmap.libraryViewController&gt;"
+                  moduleName = "purinmap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/watanabekoutarou/Desktop/purinmap/purinmap/libraryViewController.swift"
+                  timestampString = "579252331.508795"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "purinmap/mapViewController.swift"
+            timestampString = "579274587.772468"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "326"
+            endingLineNumber = "326"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
