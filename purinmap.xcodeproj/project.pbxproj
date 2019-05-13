@@ -10,6 +10,9 @@
 		43AAA96CA6B830AFAAF95668 /* Pods_purinmapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B1990D28FEA368EBEA09B6 /* Pods_purinmapTests.framework */; };
 		D23516C1447CB67192522253 /* Pods_purinmapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C0A95D8C3DAC247CD15F16 /* Pods_purinmapUITests.framework */; };
 		E017FED4AA54489D562BB7B1 /* Pods_purinmap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E120650484E9BABBCE4179 /* Pods_purinmap.framework */; };
+		F934F8922289484000B12E76 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F934F8912289484000B12E76 /* ListTableViewController.swift */; };
+		F934F89522894B4700B12E76 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F934F89322894B4700B12E76 /* ListTableViewCell.swift */; };
+		F934F89622894B4700B12E76 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F934F89422894B4700B12E76 /* ListTableViewCell.xib */; };
 		F944DFBB2268E3BB00A6A45E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944DFBA2268E3BB00A6A45E /* AppDelegate.swift */; };
 		F944DFBD2268E3BB00A6A45E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944DFBC2268E3BB00A6A45E /* ViewController.swift */; };
 		F944DFC02268E3BB00A6A45E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F944DFBE2268E3BB00A6A45E /* Main.storyboard */; };
@@ -73,6 +76,9 @@
 		99780C56DC873EB915AE1ED2 /* Pods-purinmapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-purinmapUITests.release.xcconfig"; path = "Target Support Files/Pods-purinmapUITests/Pods-purinmapUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B6F2620E3C4416C199BA37DB /* Pods-purinmap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-purinmap.debug.xcconfig"; path = "Target Support Files/Pods-purinmap/Pods-purinmap.debug.xcconfig"; sourceTree = "<group>"; };
 		C2B1990D28FEA368EBEA09B6 /* Pods_purinmapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_purinmapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F934F8912289484000B12E76 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		F934F89322894B4700B12E76 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		F934F89422894B4700B12E76 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		F944DFB72268E3BB00A6A45E /* purinmap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = purinmap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F944DFBA2268E3BB00A6A45E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F944DFBC2268E3BB00A6A45E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +180,9 @@
 				F944DFBC2268E3BB00A6A45E /* ViewController.swift */,
 				F944DFF22270BAA200A6A45E /* mapViewController.swift */,
 				F944DFEE226F7CAA00A6A45E /* libraryViewController.swift */,
+				F934F8912289484000B12E76 /* ListTableViewController.swift */,
+				F934F89322894B4700B12E76 /* ListTableViewCell.swift */,
+				F934F89422894B4700B12E76 /* ListTableViewCell.xib */,
 				F9A56AFC227EA285002EC792 /* Model.xcdatamodeld */,
 				F9A56AEB22757C30002EC792 /* test.png */,
 				F9A56AEF2278A70F002EC792 /* prin.png */,
@@ -344,6 +353,7 @@
 				F944DFC22268E3BE00A6A45E /* Assets.xcassets in Resources */,
 				F9A56AEC22757C30002EC792 /* test.png in Resources */,
 				F944DFC02268E3BB00A6A45E /* Main.storyboard in Resources */,
+				F934F89622894B4700B12E76 /* ListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +467,9 @@
 				F944DFEF226F7CAA00A6A45E /* libraryViewController.swift in Sources */,
 				F9A56B3E227F37A3002EC792 /* DataController.swift in Sources */,
 				F944DFBD2268E3BB00A6A45E /* ViewController.swift in Sources */,
+				F934F8922289484000B12E76 /* ListTableViewController.swift in Sources */,
 				F9A56B4B22844CA0002EC792 /* RealmFile.swift in Sources */,
+				F934F89522894B4700B12E76 /* ListTableViewCell.swift in Sources */,
 				F9A56AFE227EA285002EC792 /* Model.xcdatamodeld in Sources */,
 				F944DFBB2268E3BB00A6A45E /* AppDelegate.swift in Sources */,
 				F944DFF32270BAA200A6A45E /* mapViewController.swift in Sources */,

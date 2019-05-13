@@ -40,9 +40,18 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
             try!realm.write{
                 realm.add(pudding!)
                 }
+            
+            
+            let alert = UIAlertController(
+                title: "保存完了", message: "お店の情報が保存されました", preferredStyle: .alert
+            )
+            
+            alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil
+            
+            ))
+            self.present(alert, animated: true, completion:  nil)
             storeName.text = ""
             inputText.text = ""
-            
             print("保存されました")
             print("\(pudding!.shopLatitude),\(pudding!.shopLongitude)")
         } else {
@@ -53,6 +62,15 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
             pudding!.review = reviewLabel.text!
             
             try!realm.add(pudding!, update: true)
+            
+            let alert = UIAlertController(
+                title: "更新完了", message: "お店の情報が更新されました", preferredStyle: .alert
+            )
+            
+            alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil
+                
+            ))
+            self.present(alert, animated: true, completion:  nil)
         }
                 
         
@@ -68,34 +86,40 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
     
     var tap: Int = 0
     
-    @IBAction func star5() {
-            reviewLabel.text = "5.0"
-            reviewStar.text = "★ ★ ★ ★ ★"
-            tap = 1
-        
-    }
-    @IBAction func star4() {
-            reviewLabel.text = "4.0"
-            reviewStar.text = "★ ★ ★ ★ ☆"
-    }
-    @IBAction func star3() {
-            reviewLabel.text = "3.0"
-            reviewStar.text = "★ ★ ★ ☆ ☆"
-    }
-    @IBAction func star2() {
-            reviewLabel.text = "2.0"
-            reviewStar.text = "★ ★ ☆ ☆ ☆"
-    }
-    @IBAction func star1() {
-        if tap == 1 {
-            reviewLabel.text = "0.0"
-            reviewStar.text = "☆ ☆ ☆ ☆ ☆"
-            tap = 0
-        }  else {
+    @IBAction func starPlus() {
+        if tap == 0 {
+            
             reviewLabel.text = "1.0"
             reviewStar.text = "★ ☆ ☆ ☆ ☆"
+            tap = 1
+            
+        } else if tap == 1 {
+            
+            reviewLabel.text = "2.0"
+            reviewStar.text = "★ ★ ☆ ☆ ☆"
+            tap = 2
+            
+        } else if tap == 2 {
+            
+            reviewLabel.text = "3.0"
+            reviewStar.text = "★ ★ ★ ☆ ☆"
+            tap = 3
+            
+        } else if tap == 3 {
+            
+            reviewLabel.text = "4.0"
+            reviewStar.text = "★ ★ ★ ★ ☆"
+            tap = 4
+            
+        } else if tap == 4 {
+            
+            reviewLabel.text = "5.0"
+            reviewStar.text = "★ ★ ★ ★ ★"
+            tap = 0
+            
         }
     }
+  
     
     
     
