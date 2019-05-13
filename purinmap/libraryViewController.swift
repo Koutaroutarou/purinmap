@@ -25,28 +25,37 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
     
     //Realm保存機能
     let realm = try! Realm()
-    var pudding = PuddingList()
+    var pudding: PuddingList?
     
     @IBAction func register(_ sender: Any) {
+        if pudding == nil {
+            pudding = PuddingList()
+            pudding!.shopName = storeName.text!
+            pudding!.commnet = inputText.text!
+            pudding!.reviewStarRealm = reviewStar.text!
+            pudding!.review = reviewLabel.text!
+            pudding!.shopLatitude = receiveLatitude!
+            pudding!.shopLongitude = receiveLongitude!
+            
+            try!realm.write{
+                realm.add(pudding!)
+                }
+            storeName.text = ""
+            inputText.text = ""
+            
+            print("保存されました")
+            print("\(pudding!.shopLatitude),\(pudding!.shopLongitude)")
+        } else {
+            pudding = PuddingList()
+            pudding!.shopName = storeName.text!
+            pudding!.commnet = inputText.text!
+            pudding!.reviewStarRealm = reviewStar.text!
+            pudding!.review = reviewLabel.text!
+            
+            try!realm.add(pudding!, update: true)
+        }
+                
         
-        pudding.shopName = storeName.text!
-        pudding.commnet = inputText.text!
-        pudding.reviewStarRealm = reviewStar.text!
-        pudding.review = reviewLabel.text!
-        pudding.shopLatitude = receiveLatitude!
-        pudding.shopLongitude = receiveLongitude!
-        
-        
-//  写真の保存      pudding.imageData =
-        
-        try!realm.write{
-            realm.add(pudding)
-            }
-        storeName.text = ""
-        inputText.text = ""
-        
-        print("保存されました")
-        print("\(pudding.shopLatitude),\(pudding.shopLongitude)")
     }
     
     
