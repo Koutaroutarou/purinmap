@@ -12,12 +12,17 @@ import RealmSwift
 class libraryViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate,UITextFieldDelegate {
     
     //前のビューから受け取る箱を用意
-    var receiveLatitude: Double!
-    var receiveLongitude: Double!
+    //新規保存用
+    var newLatitude: Double!
+    var newLongitude: Double!
+    //保存されているもの表示用、更新用
     var receiveShopName: String!
     var receiveComment: String!
     var receiveReview: String!
     var receiveReviewStar: String!
+    var receiveLatitude: Double!
+    var receiveLongitude: Double!
+    
     
     
     
@@ -28,14 +33,17 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
     var pudding: PuddingList?
     
     @IBAction func register(_ sender: Any) {
+    //データがなければ新規保存
+        
         if pudding == nil {
+            
             pudding = PuddingList()
             pudding!.shopName = storeName.text!
             pudding!.commnet = inputText.text!
             pudding!.reviewStarRealm = reviewStar.text!
             pudding!.review = reviewLabel.text!
-            pudding!.shopLatitude = receiveLatitude!
-            pudding!.shopLongitude = receiveLongitude!
+            pudding!.shopLatitude = newLatitude
+            pudding!.shopLongitude = newLongitude
             
             try!realm.write{
                 realm.add(pudding!)
@@ -54,12 +62,16 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
             inputText.text = ""
             print("保存されました")
             print("\(pudding!.shopLatitude),\(pudding!.shopLongitude)")
+            
         } else {
+    //データがすでにある場合は情報の更新
             pudding = PuddingList()
             pudding!.shopName = storeName.text!
             pudding!.commnet = inputText.text!
             pudding!.reviewStarRealm = reviewStar.text!
             pudding!.review = reviewLabel.text!
+            pudding!.shopLatitude = receiveLatitude
+            pudding!.shopLongitude = receiveLongitude
             
             try!realm.add(pudding!, update: true)
             
