@@ -267,7 +267,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="List" id="sUh-M7-RGN">
-                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="pKF-2B-77M"/>
+                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="pKF-2B-77M">
+                            <connections>
+                                <action selector="returnView" destination="1dc-8r-XSV" id="c4R-O6-ex2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSO-04-oKO" userLabel="First Responder" sceneMemberID="firstResponder"/>

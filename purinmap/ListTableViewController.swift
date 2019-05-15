@@ -15,12 +15,15 @@ class ListTableViewController: UITableViewController {
     var pudding = PuddingList()
     var puddingArray: Results<PuddingList>!
     
+    @IBAction func returnView() {
+        self.dismiss(animated: true, completion: nil)
+    }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.register(UINib(nibName: "ListTableViewCell", bundle: nil), forHeaderFooterViewReuseIdentifier: "cell")
+        tableView.register(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         
     }
     
