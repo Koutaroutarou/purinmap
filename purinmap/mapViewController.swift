@@ -13,6 +13,7 @@ class CustomAnnotation: MKPointAnnotation {
 class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDelegate {
     
     //新規保存用
+    var ver: Int = 0
     var tappedLatitude: Double!
     var tappedLongitude: Double!
     //保存されているのを表示して更新用

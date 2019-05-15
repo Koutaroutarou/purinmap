@@ -42,8 +42,8 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
             pudding!.commnet = inputText.text!
             pudding!.reviewStarRealm = reviewStar.text!
             pudding!.review = reviewLabel.text!
-            pudding!.shopLatitude = newLatitude
-            pudding!.shopLongitude = newLongitude
+            pudding!.shopLatitude = newLatitude!
+            pudding!.shopLongitude = newLongitude!
             
             try!realm.write{
                 realm.add(pudding!)
