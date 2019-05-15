@@ -25,6 +25,8 @@ class ListTableViewController: UITableViewController {
 
         tableView.register(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         
+        puddingArray = realm.objects(PuddingList.self)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,15 +41,16 @@ class ListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
      
-        return 30
+        return puddingArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         as! ListTableViewCell
         
-        let getStar = pudding.reviewStarRealm
-        let getName = pudding.shopName
+        let getStar = puddingArray[indexPath.row].reviewStarRealm
+        let getName = puddingArray[indexPath.row].shopName
+        
         
         cell.star.text = getStar
         cell.name.text = getName
