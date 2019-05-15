@@ -22,7 +22,7 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
     var receiveReviewStar: String!
     var receiveLatitude: Double!
     var receiveLongitude: Double!
-    
+    var receiveVersion: Int!
     
     
     
@@ -35,7 +35,7 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
     @IBAction func register(_ sender: Any) {
     //データがなければ新規保存
         
-        if pudding == nil {
+        if receiveVersion == 0 {
             
             pudding = PuddingList()
             pudding!.shopName = storeName.text!
@@ -63,15 +63,15 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
             print("保存されました")
             print("\(pudding!.shopLatitude),\(pudding!.shopLongitude)")
             
-        } else {
+        } else  {
     //データがすでにある場合は情報の更新
             pudding = PuddingList()
             pudding!.shopName = storeName.text!
             pudding!.commnet = inputText.text!
             pudding!.reviewStarRealm = reviewStar.text!
             pudding!.review = reviewLabel.text!
-            pudding!.shopLatitude = receiveLatitude
-            pudding!.shopLongitude = receiveLongitude
+            pudding!.shopLatitude = receiveLatitude!
+            pudding!.shopLongitude = receiveLongitude!
             
             try!realm.add(pudding!, update: true)
             

@@ -12,6 +12,7 @@ class ListTableViewCell: UITableViewCell {
     
     @IBOutlet var star: UILabel!
     @IBOutlet var name: UILabel!
+    @IBOutlet var picture: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

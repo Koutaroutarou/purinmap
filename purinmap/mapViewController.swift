@@ -13,7 +13,7 @@ class CustomAnnotation: MKPointAnnotation {
 class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDelegate {
     
     //新規保存用
-    var ver: Int = 0
+    var version: Int = 0
     var tappedLatitude: Double!
     var tappedLongitude: Double!
     //保存されているのを表示して更新用
@@ -266,12 +266,14 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
             getReviewStar = puddingArray[tag].reviewStarRealm
             getLatitude = puddingArray[tag].shopLatitude
             getLongitude = puddingArray[tag].shopLongitude
+            version = 1
             
         } else {
             getShopName = ""
             getComment = ""
             getReview = "0.0"
             getReviewStar = "☆ ☆ ☆ ☆ ☆"
+            version = 0
         }
         
     
@@ -289,23 +291,25 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
             
             let LibraryViewController: libraryViewController = segue.destination as! libraryViewController
             
-            //新規保存用
-            LibraryViewController.newLatitude = self.tappedLatitude
-            LibraryViewController.newLongitude = self.tappedLongitude
             
-            //既存のデータ更新用
             LibraryViewController.receiveShopName = self.getShopName
             LibraryViewController.receiveComment = self.getComment
             LibraryViewController.receiveReview = self.getReview
             LibraryViewController.receiveReviewStar = self.getReviewStar
-            LibraryViewController.receiveLatitude = self.getLatitude
-            LibraryViewController.receiveLatitude = self.getLongitude
+            LibraryViewController.receiveVersion = self.version
             
-            
+            if version == 0 {
+                //新規保存用
+                LibraryViewController.newLatitude = self.tappedLatitude
+                LibraryViewController.newLongitude = self.tappedLongitude
+                
+            } else {
+                //既存のデータ更新用
+                
+                LibraryViewController.receiveLatitude = self.getLatitude
+                LibraryViewController.receiveLatitude = self.getLongitude
             print("値の受け渡し完了")
-            
+            }
         }
     }
-    
-    
 }
