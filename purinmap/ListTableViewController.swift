@@ -19,9 +19,9 @@ class ListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.register(UINib(nibName: "ListTableViewCell", bundle: nil), forHeaderFooterViewReuseIdentifier: "cell")
 
+        tableView.register(UINib(nibName: "ListTableViewCell", bundle: nil), forHeaderFooterViewReuseIdentifier: "cell")
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,7 +36,7 @@ class ListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
      
-        return puddingArray!.count
+        return 30
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
