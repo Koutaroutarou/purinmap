@@ -133,7 +133,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
             //ピンを表示
             self.myMapView.addAnnotation(pin)
             
-        } else if number == "渋谷" {
+        } else if number == "渋谷エリア" {
             //ここで表示する領域を場所ごとに変える、渋谷駅中心
             //渋谷駅の緯度、経度  中心点
             let shibuyaPoint: CLLocationCoordinate2D = CLLocationCoordinate2DMake(35.658034, 139.701636)
@@ -150,7 +150,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
             //ピンを表示
             self.myMapView.addAnnotation(pin)
             
-        } else if number == "横浜" {
+        } else if number == "横浜エリア" {
             
             //横浜駅中心で地図を表示
             let yokohamaPoint: CLLocationCoordinate2D = CLLocationCoordinate2DMake(35.46578, 139.622313)
@@ -159,23 +159,23 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
             
             myMapView.region = myRegion
             pin.coordinate = yokohamaPoint
-            pin.title = "横浜駅"
+            pin.title = "横浜駅周辺"
             
             //ピンを表示
             self.myMapView.addAnnotation(pin)
             
-        } else if number == "原宿" {
+        } else if number == "吉祥寺エリア" {
             
             //原宿駅中心で地図を表示
             
-            let harajukuPoint: CLLocationCoordinate2D = CLLocationCoordinate2DMake(35.670229, 139.702698)
+            let kichiPoint: CLLocationCoordinate2D = CLLocationCoordinate2DMake(35.702811, 139.579804),
             
-            myRegion = MKCoordinateRegion(center: harajukuPoint, span: mySpan)
+            myRegion = MKCoordinateRegion(center: kichiPoint, span: mySpan)
             
             
             myMapView.region = myRegion
-            pin.coordinate = harajukuPoint
-            pin.title = "原宿駅"
+            pin.coordinate = kichiPoint
+            pin.title = "吉祥寺駅"
             
             //ピンを表示
             self.myMapView.addAnnotation(pin)

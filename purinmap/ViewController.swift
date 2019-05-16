@@ -14,7 +14,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet var textField: UITextField!
     
     var pickerView: UIPickerView = UIPickerView()
-    let list = ["現在地", "渋谷", "横浜", "原宿"]
+    let list = ["現在地", "渋谷エリア", "横浜エリア", "吉祥寺エリア"]
     
     
     override func viewDidLoad() {
