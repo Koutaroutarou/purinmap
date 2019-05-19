@@ -214,10 +214,10 @@
                         <viewLayoutGuide key="safeArea" id="ge2-JD-fkP"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="DsU-e8-LR9" id="WQM-Cu-clT"/>
                         <outlet property="inputText" destination="LBe-7H-wCD" id="RqZ-l1-Bcx"/>
                         <outlet property="reviewLabel" destination="jdU-yj-pqh" id="eWn-op-RZ8"/>
                         <outlet property="reviewStar" destination="aW8-FS-vcc" id="PnV-kO-FKa"/>
+                        <outlet property="selectedImage" destination="DsU-e8-LR9" id="hdf-Vn-3uT"/>
                         <outlet property="storeName" destination="aUd-Hb-JIq" id="qPR-0e-KOy"/>
                     </connections>
                 </viewController>

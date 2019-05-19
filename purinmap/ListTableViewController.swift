@@ -44,6 +44,7 @@ class ListTableViewController: UITableViewController {
         return puddingArray.count
     }
     
+    //セルに表示する
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         as! ListTableViewCell
@@ -58,12 +59,14 @@ class ListTableViewController: UITableViewController {
         return cell
     }
     
+    //セルの編集を許可
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         
         return true
     
     }
     
+    //スワイプでセルの情報を削除
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if  editingStyle == UITableViewCell.EditingStyle.delete {
             

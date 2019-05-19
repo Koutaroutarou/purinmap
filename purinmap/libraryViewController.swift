@@ -28,6 +28,7 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
     
     @IBOutlet var storeName: UITextField!
     
+    
     //Realm保存機能
     let realm = try! Realm()
     var pudding: PuddingList?
@@ -44,6 +45,12 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
             pudding!.review = reviewLabel.text!
             pudding!.shopLatitude = newLatitude!
             pudding!.shopLongitude = newLongitude!
+            
+            guard let _selectedImage = selectedImage else {
+                print("画像を選択してね")
+                return
+            }
+            pudding!.purinImage = _selectedImage
             
             try!realm.write{
                 realm.add(pudding!)
@@ -141,7 +148,9 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
     @IBOutlet var inputText: UITextView!
     
     //写真表示ようImageView
-    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var selectedImage: UIImageView!
+    
+    
     
     
     
@@ -154,60 +163,7 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
         inputText.text = receiveComment
         reviewStar.text = receiveReviewStar
         reviewLabel.text = receiveReview
-        
-        
     }
-        
-//追加した部分↓
-        //教科書追加↓
-//
-//        if userDefaults.array(forKey: "REVIEW") != nil {
-//
-//            reviewArray = userDefaults.array(forKey: "REVIEW") as! [Dictionary<String, String>]
-//        }
-//
-//
-//
-//        storeName.delegate = self
-//
-//        userDefaults.register(defaults: ["DataStore": "default"])
-//
-//        storeName.text = readData()
-//
-//
-//
-//
-//
-//    }
-//
-//    func readData() -> String {
-//
-//        let str: String = userDefaults.object(forKey: "DataStore") as! String
-//
-//        return str
-//
-//    }
-//
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//
-//        testText = storeName.text!
-//        storeName.text = testText
-//
-//        storeName.resignFirstResponder()
-//
-//        saveData(str: testText)
-//
-//        return true
-//
-//    }
-//
-//    func saveData(str: String) {
-//
-//
-//        userDefaults.set(str, forKey: "DataStore")
-//    }
-//
-    //↑ここまで追加
     
     
     
@@ -243,7 +199,7 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
         self.dismiss(animated: true, completion: nil)
         
         //画像を出力
-        imageView.image = info[.originalImage]as? UIImage
+        selectedImage.image = info[.originalImage]as? UIImage
     }
     
     @IBAction func back() {
