@@ -23,6 +23,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
     var getReviewStar: String!
     var getLatitude: Double!
     var getLongitude: Double!
+    var getImage: UIImage!
     
     
     var regionNumber2: String?
@@ -266,6 +267,8 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
             getReviewStar = puddingArray[tag].reviewStarRealm
             getLatitude = puddingArray[tag].shopLatitude
             getLongitude = puddingArray[tag].shopLongitude
+            getImage = puddingArray[tag].purinImage
+            
             version = 1
             
         } else {
@@ -297,6 +300,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
             LibraryViewController.receiveReview = self.getReview
             LibraryViewController.receiveReviewStar = self.getReviewStar
             LibraryViewController.receiveVersion = self.version
+            LibraryViewController.receiveImage = self.getImage
             
             if version == 0 {
                 //新規保存用

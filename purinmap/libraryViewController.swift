@@ -23,10 +23,12 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
     var receiveLatitude: Double!
     var receiveLongitude: Double!
     var receiveVersion: Int!
+    var receiveImage: UIImage!
     
     
     
     @IBOutlet var storeName: UITextField!
+    var photo: UIImage!
     
     
     //Realm保存機能
@@ -50,7 +52,7 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
                 print("画像を選択してね")
                 return
             }
-            pudding!.purinImage = _selectedImage
+            pudding!.purinImage = photo
             
             try!realm.write{
                 realm.add(pudding!)
@@ -79,6 +81,7 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
             pudding!.review = reviewLabel.text!
             pudding!.shopLatitude = receiveLatitude!
             pudding!.shopLongitude = receiveLongitude!
+            pudding!.purinImage = receiveImage!
             
             try!realm.add(pudding!, update: true)
             
@@ -163,6 +166,7 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
         inputText.text = receiveComment
         reviewStar.text = receiveReviewStar
         reviewLabel.text = receiveReview
+        selectedImage.image = receiveImage
     }
     
     
@@ -196,10 +200,12 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
     //写真が選択されたときに呼ばれるメソッド
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-        self.dismiss(animated: true, completion: nil)
-        
+        photo = info[.originalImage]as? UIImage
+    
         //画像を出力
-        selectedImage.image = info[.originalImage]as? UIImage
+        selectedImage.image = photo
+        
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func back() {

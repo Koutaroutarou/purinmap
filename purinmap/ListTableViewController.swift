@@ -51,10 +51,13 @@ class ListTableViewController: UITableViewController {
         
         let getStar = puddingArray[indexPath.row].reviewStarRealm
         let getName = puddingArray[indexPath.row].shopName
+        let getImage = puddingArray[indexPath.row].purinImage
         
         
         cell.star.text = getStar
         cell.name.text = getName
+        cell.picture.image = getImage
+        
         
         return cell
     }
