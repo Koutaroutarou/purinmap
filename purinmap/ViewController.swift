@@ -20,6 +20,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    
+        
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         
         pickerView.delegate = self
