@@ -11,6 +11,8 @@ import RealmSwift
 
 class PuddingList: Object {
     
+    @objc dynamic var id = 0
+    
     @objc dynamic var shopName: String = ""
     
     @objc dynamic var commnet: String = ""
@@ -50,5 +52,10 @@ class PuddingList: Object {
 
     override static func ignoredProperties() -> [String] {
         return ["_purinImage", "purinImage"]
+    }
+    
+    override static func primaryKey() -> String {
+        
+        return "id"
     }
 }

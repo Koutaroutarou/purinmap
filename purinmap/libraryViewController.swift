@@ -24,6 +24,8 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
     var receiveLongitude: Double!
     var receiveVersion: Int!
     var receiveImage: UIImage!
+    var receiveId: Int!
+    
     
     
     
@@ -47,6 +49,12 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
             pudding!.review = reviewLabel.text!
             pudding!.shopLatitude = newLatitude!
             pudding!.shopLongitude = newLongitude!
+            if let primaryId = realm.objects(PuddingList.self).last {
+                pudding!.id = primaryId.id + 1
+            } else {
+                pudding!.id = 0
+            }
+
             
             guard let _selectedImage = selectedImage else {
                 print("画像を選択してね")
@@ -54,7 +62,7 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
             }
             pudding!.purinImage = photo
             
-            try!realm.write{
+            try! realm.write{
                 realm.add(pudding!)
                 }
             
@@ -81,9 +89,20 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
             pudding!.review = reviewLabel.text!
             pudding!.shopLatitude = receiveLatitude!
             pudding!.shopLongitude = receiveLongitude!
-            pudding!.purinImage = receiveImage!
+            pudding!.purinImage = selectedImage!.image
+            pudding!.id = receiveId!
+//            if let primaryId = realm.objects(PuddingList.self).last {
+//                pudding!.id = primaryId.id + 1
+//            } else {
+//                pudding!.id = 0
+//            }
+
             
-            try!realm.add(pudding!, update: true)
+//            try! realm.add(pudding!, update: true)
+            try! realm.write {
+                realm.add(pudding!, update: true)
+            }
+
             
             let alert = UIAlertController(
                 title: "更新完了", message: "お店の情報が更新されました", preferredStyle: .alert
@@ -93,6 +112,8 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
                 
             ))
             self.present(alert, animated: true, completion:  nil)
+            
+            print("更新完了")
         }
                 
         
@@ -162,11 +183,13 @@ class libraryViewController: UIViewController, UINavigationControllerDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
         storeName.text = receiveShopName
         inputText.text = receiveComment
         reviewStar.text = receiveReviewStar
         reviewLabel.text = receiveReview
         selectedImage.image = receiveImage
+       
     }
     
     

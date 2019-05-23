@@ -15,6 +15,14 @@ class ListTableViewController: UITableViewController {
     var pudding = PuddingList()
     var puddingArray: Results<PuddingList>!
     
+    
+    var getStar: String!
+    var getReview: String!
+    var getImage: UIImage!
+    var getName: String!
+    var getComment: String!
+    
+    
     @IBAction func returnView() {
         self.dismiss(animated: true, completion: nil)
     }
@@ -49,9 +57,10 @@ class ListTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         as! ListTableViewCell
         
-        let getStar = puddingArray[indexPath.row].reviewStarRealm
-        let getName = puddingArray[indexPath.row].shopName
-        let getImage = puddingArray[indexPath.row].purinImage
+         getStar = puddingArray[indexPath.row].reviewStarRealm
+         getName = puddingArray[indexPath.row].shopName
+         getImage = puddingArray[indexPath.row].purinImage
+         
         
         
         cell.star.text = getStar
@@ -81,9 +90,38 @@ class ListTableViewController: UITableViewController {
             
         }
     }
+//    セルを選択して画面遷移
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        // セルの選択を解除
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        getStar = puddingArray[indexPath.row].reviewStarRealm
+        getName = puddingArray[indexPath.row].shopName
+        getImage = puddingArray[indexPath.row].purinImage
+        getComment = puddingArray[indexPath.row].commnet
+        getReview = puddingArray[indexPath.row].review
+        
+        performSegue(withIdentifier: "toResult", sender: (Any).self)
+    }
     
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toResult" {
+            
+            let navigation = segue.destination as! UINavigationController
+            let ResultViewController: ResultViewController = navigation.topViewController as! ResultViewController
+            
+            ResultViewController.getComment = self.getComment
+            ResultViewController.getImage = self.getImage
+            ResultViewController.getName = self.getName
+            ResultViewController.getStar = self.getStar
+            ResultViewController.getReview = self.getReview
+            
+            
+        }
+    }
     
 
 }

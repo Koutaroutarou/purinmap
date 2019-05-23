@@ -24,6 +24,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
     var getLatitude: Double!
     var getLongitude: Double!
     var getImage: UIImage!
+    var getId: Int!
     
     
     var regionNumber2: String?
@@ -33,6 +34,8 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
     let myMapView = MKMapView()
     
     let userDefaults = UserDefaults.standard
+    
+    var myLocation: CLLocation! = nil
     
     @IBAction func returnView() {
         self.dismiss(animated: true, completion: nil)
@@ -109,16 +112,23 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
     //現在地の取得に成功した場合の処理
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("現在地の取得に成功しました")
+        
+        if myLocation == nil {
+            
         //配列から現在座標を取得（配列lovationsの中から最新のものを取得する）
-        let myLocation = locations.last! as CLLocation
+        myLocation = locations.first! as CLLocation
+            
+        
         //pinに表示するためにはCLLocationCoordinate2Dに変換してあげる必要がある
         let currentLocation = myLocation.coordinate
+        
+        
         //ピンの生成と配置
         let pin = MKPointAnnotation()
         
         
         //アプリ起動時の表示領域の設定→最初のページで書かれた位置情報の場所に飛びたい
-        let mySpan = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let mySpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         var myRegion = MKCoordinateRegion(center: currentLocation, span: mySpan)
         
         let number: String = regionNumber2!
@@ -128,12 +138,12 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
             //現在地を中心に地図を開く
             myMapView.region = myRegion
             
-            pin.coordinate = currentLocation
-            pin.title = "現在地"
-            
-            //ピンを表示
-            self.myMapView.addAnnotation(pin)
-            
+//            pin.coordinate = currentLocation
+//            pin.title = "現在地"
+//
+//            //ピンを表示
+//            self.myMapView.addAnnotation(pin)
+//
         } else if number == "渋谷エリア" {
             //ここで表示する領域を場所ごとに変える、渋谷駅中心
             //渋谷駅の緯度、経度  中心点
@@ -181,12 +191,24 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
             //ピンを表示
             self.myMapView.addAnnotation(pin)
         }
+        
+        }
+        
+       
     }
     
     
     //現在地の取得に失敗した場合の処理
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("現在地の取得に失敗しました")
+        //位置情報の取得許可をiPhone上で行う
+        let alert = UIAlertController(
+            title: "位置情報の取得失敗", message: "位置情報の利用を許可してください", preferredStyle: .alert
+        )
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil
+            
+        ))
     }
     
     
@@ -268,6 +290,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
             getLatitude = puddingArray[tag].shopLatitude
             getLongitude = puddingArray[tag].shopLongitude
             getImage = puddingArray[tag].purinImage
+            getId = puddingArray[tag].id
             
             version = 1
             
@@ -277,6 +300,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
             getReview = "0.0"
             getReviewStar = "☆ ☆ ☆ ☆ ☆"
             version = 0
+            getImage = nil
         }
         
     
@@ -301,6 +325,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
             LibraryViewController.receiveReviewStar = self.getReviewStar
             LibraryViewController.receiveVersion = self.version
             LibraryViewController.receiveImage = self.getImage
+            LibraryViewController.receiveId = self.getId
             
             if version == 0 {
                 //新規保存用
@@ -311,7 +336,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
                 //既存のデータ更新用
                 
                 LibraryViewController.receiveLatitude = self.getLatitude
-                LibraryViewController.receiveLatitude = self.getLongitude
+                LibraryViewController.receiveLongitude = self.getLongitude
             print("値の受け渡し完了")
             }
         }
