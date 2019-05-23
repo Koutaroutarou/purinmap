@@ -747,7 +747,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9PRS99ML5M;
+				DEVELOPMENT_TEAM = 2K446D59RQ;
 				FRAMEWORK_SEARCH_PATHS = /Users/watanabekoutarou/Desktop/purinmap;
 				INFOPLIST_FILE = purinmap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
@@ -755,7 +755,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.litech.purinmap;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.lifeistech.puddingmaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -770,7 +770,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9PRS99ML5M;
+				DEVELOPMENT_TEAM = 2K446D59RQ;
 				FRAMEWORK_SEARCH_PATHS = /Users/watanabekoutarou/Desktop/purinmap;
 				INFOPLIST_FILE = purinmap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
@@ -778,7 +778,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.litech.purinmap;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.lifeistech.puddingmaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
