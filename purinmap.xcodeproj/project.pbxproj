@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		43AAA96CA6B830AFAAF95668 /* Pods_purinmapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B1990D28FEA368EBEA09B6 /* Pods_purinmapTests.framework */; };
-		D23516C1447CB67192522253 /* Pods_purinmapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C0A95D8C3DAC247CD15F16 /* Pods_purinmapUITests.framework */; };
 		E017FED4AA54489D562BB7B1 /* Pods_purinmap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20E120650484E9BABBCE4179 /* Pods_purinmap.framework */; };
 		F934F8922289484000B12E76 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F934F8912289484000B12E76 /* ListTableViewController.swift */; };
 		F934F89522894B4700B12E76 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F934F89322894B4700B12E76 /* ListTableViewCell.swift */; };
@@ -87,15 +85,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		022640F6A00D8E69E6FC62D7 /* Pods-purinmapTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-purinmapTests.release.xcconfig"; path = "Target Support Files/Pods-purinmapTests/Pods-purinmapTests.release.xcconfig"; sourceTree = "<group>"; };
 		20E120650484E9BABBCE4179 /* Pods_purinmap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_purinmap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2582DE265AF67B4C8D1AB976 /* Pods-purinmapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-purinmapUITests.debug.xcconfig"; path = "Target Support Files/Pods-purinmapUITests/Pods-purinmapUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		550692CD8A653361DA8CB5F9 /* Pods-purinmapTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-purinmapTests.debug.xcconfig"; path = "Target Support Files/Pods-purinmapTests/Pods-purinmapTests.debug.xcconfig"; sourceTree = "<group>"; };
 		660898B2C8F5BCEA168D8E39 /* Pods-purinmap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-purinmap.release.xcconfig"; path = "Target Support Files/Pods-purinmap/Pods-purinmap.release.xcconfig"; sourceTree = "<group>"; };
-		68C0A95D8C3DAC247CD15F16 /* Pods_purinmapUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_purinmapUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		99780C56DC873EB915AE1ED2 /* Pods-purinmapUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-purinmapUITests.release.xcconfig"; path = "Target Support Files/Pods-purinmapUITests/Pods-purinmapUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B6F2620E3C4416C199BA37DB /* Pods-purinmap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-purinmap.debug.xcconfig"; path = "Target Support Files/Pods-purinmap/Pods-purinmap.debug.xcconfig"; sourceTree = "<group>"; };
-		C2B1990D28FEA368EBEA09B6 /* Pods_purinmapTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_purinmapTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F934F8912289484000B12E76 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		F934F89322894B4700B12E76 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		F934F89422894B4700B12E76 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
@@ -160,7 +152,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43AAA96CA6B830AFAAF95668 /* Pods_purinmapTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +159,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D23516C1447CB67192522253 /* Pods_purinmapUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,10 +170,6 @@
 			children = (
 				B6F2620E3C4416C199BA37DB /* Pods-purinmap.debug.xcconfig */,
 				660898B2C8F5BCEA168D8E39 /* Pods-purinmap.release.xcconfig */,
-				550692CD8A653361DA8CB5F9 /* Pods-purinmapTests.debug.xcconfig */,
-				022640F6A00D8E69E6FC62D7 /* Pods-purinmapTests.release.xcconfig */,
-				2582DE265AF67B4C8D1AB976 /* Pods-purinmapUITests.debug.xcconfig */,
-				99780C56DC873EB915AE1ED2 /* Pods-purinmapUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -270,8 +256,6 @@
 			children = (
 				F9A56AF3227A0A2F002EC792 /* purinmap.xcodeproj */,
 				20E120650484E9BABBCE4179 /* Pods_purinmap.framework */,
-				C2B1990D28FEA368EBEA09B6 /* Pods_purinmapTests.framework */,
-				68C0A95D8C3DAC247CD15F16 /* Pods_purinmapUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -323,6 +307,7 @@
 				F944DFB52268E3BB00A6A45E /* Resources */,
 				F9A56B442284445B002EC792 /* Embed Frameworks */,
 				F9A56B48228447FF002EC792 /* ShellScript */,
+				16846CA682DF540FCBF99D64 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -337,7 +322,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F944DFE22268E3BE00A6A45E /* Build configuration list for PBXNativeTarget "purinmapTests" */;
 			buildPhases = (
-				EFC6E7DFB007AFD4B881DD86 /* [CP] Check Pods Manifest.lock */,
 				F944DFC72268E3BE00A6A45E /* Sources */,
 				F944DFC82268E3BE00A6A45E /* Frameworks */,
 				F944DFC92268E3BE00A6A45E /* Resources */,
@@ -356,7 +340,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F944DFE52268E3BE00A6A45E /* Build configuration list for PBXNativeTarget "purinmapUITests" */;
 			buildPhases = (
-				EDCC7D6A1F65FD071DDE0CED /* [CP] Check Pods Manifest.lock */,
 				F944DFD22268E3BE00A6A45E /* Sources */,
 				F944DFD32268E3BE00A6A45E /* Frameworks */,
 				F944DFD42268E3BE00A6A45E /* Resources */,
@@ -471,6 +454,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		16846CA682DF540FCBF99D64 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-purinmap/Pods-purinmap-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BWWalkthrough/BWWalkthrough.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BWWalkthrough.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-purinmap/Pods-purinmap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5B1B277415D9E2A05694142E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -487,50 +492,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-purinmap-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EDCC7D6A1F65FD071DDE0CED /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-purinmapUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EFC6E7DFB007AFD4B881DD86 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-purinmapTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -789,7 +750,6 @@
 		};
 		F944DFE32268E3BE00A6A45E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 550692CD8A653361DA8CB5F9 /* Pods-purinmapTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -819,7 +779,6 @@
 		};
 		F944DFE42268E3BE00A6A45E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 022640F6A00D8E69E6FC62D7 /* Pods-purinmapTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -849,7 +808,6 @@
 		};
 		F944DFE62268E3BE00A6A45E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2582DE265AF67B4C8D1AB976 /* Pods-purinmapUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -870,7 +828,6 @@
 		};
 		F944DFE72268E3BE00A6A45E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99780C56DC873EB915AE1ED2 /* Pods-purinmapUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

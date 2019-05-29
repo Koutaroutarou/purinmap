@@ -4,15 +4,6 @@
 target 'purinmap' do
  
   use_frameworks!
+	pod 'BWWalkthrough'
 
-  target 'purinmapTests' do
-    inherit! :search_paths
-    # Pods for testing
   end
-
-  target 'purinmapUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-end
