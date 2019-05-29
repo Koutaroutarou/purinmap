@@ -8,10 +8,10 @@
 
 import UIKit
 import RealmSwift
+import BWWalkthrough
 
 
-
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, BWWalkthroughViewControllerDelegate {
     
     @IBOutlet var textField: UITextField!
     
@@ -46,6 +46,51 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         print("selected something")
         textField.resignFirstResponder()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let userDefaults = UserDefaults.standard
+        
+        if !userDefaults.bool(forKey: "walkthroughPresented") {
+            
+            showWalkthrough()
+            
+            userDefaults.set(true, forKey: "walkthroughPresented")
+            userDefaults.synchronize()
+        }
+    }
+    
+    @IBAction func showWalkthrough() {
+        
+        //Walkthrough.soryboardのインスタンス作成
+        let stb = UIStoryboard(name: "Walkthrough2", bundle: nil)
+        
+        //先ほど設定したStoryboard IDをもとにStoryboard内のViewControllerを呼び出す
+        let walkthrough = stb.instantiateViewController(withIdentifier: "walk") as! BWWalkthroughViewController
+        let page_one = stb.instantiateViewController(withIdentifier: "walk1")
+        let page_two = stb.instantiateViewController(withIdentifier: "walk2")
+        let page_three = stb.instantiateViewController(withIdentifier: "walk3")
+        let page_four = stb.instantiateViewController(withIdentifier: "walk4")
+        
+        //Walkthrough.storyboardの一枚目のViewControllerにdelegateを設定
+        walkthrough.delegate = self
+        
+        walkthrough.add(viewController: page_one)
+        walkthrough.add(viewController: page_two)
+        walkthrough.add(viewController: page_three)
+        walkthrough.add(viewController: page_four)
+        
+        self.present(walkthrough, animated: true, completion: nil)
+    }
+    
+    func walkthroughPageDidChange(_ pageNumber: Int) {
+        print("Current Page \(pageNumber)")
+    }
+    
+    func walkthroughCloseButtonPressed() {
+        self.dismiss(animated: true, completion: nil)
     }
         
         

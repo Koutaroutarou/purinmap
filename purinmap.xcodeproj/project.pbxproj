@@ -24,6 +24,11 @@
 		F944DFDB2268E3BE00A6A45E /* purinmapUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944DFDA2268E3BE00A6A45E /* purinmapUITests.swift */; };
 		F944DFEF226F7CAA00A6A45E /* libraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944DFEE226F7CAA00A6A45E /* libraryViewController.swift */; };
 		F944DFF32270BAA200A6A45E /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944DFF22270BAA200A6A45E /* mapViewController.swift */; };
+		F94D0523229E919A00277ED8 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = F94D0522229E919A00277ED8 /* first.png */; };
+		F94D0525229E919F00277ED8 /* third.png in Resources */ = {isa = PBXBuildFile; fileRef = F94D0524229E919F00277ED8 /* third.png */; };
+		F94D0527229E91A300277ED8 /* firstt.png in Resources */ = {isa = PBXBuildFile; fileRef = F94D0526229E91A300277ED8 /* firstt.png */; };
+		F94D0529229E91A900277ED8 /* forth.png in Resources */ = {isa = PBXBuildFile; fileRef = F94D0528229E91A900277ED8 /* forth.png */; };
+		F94D052F229E9D2000277ED8 /* Walkthrough2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94D052E229E9D2000277ED8 /* Walkthrough2.storyboard */; };
 		F9A56AFE227EA285002EC792 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F9A56AFC227EA285002EC792 /* Model.xcdatamodeld */; };
 		F9A56B3E227F37A3002EC792 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A56B3D227F37A3002EC792 /* DataController.swift */; };
 		F9A56B422284445B002EC792 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A56B412284445B002EC792 /* Realm.framework */; };
@@ -110,6 +115,11 @@
 		F944DFDC2268E3BE00A6A45E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F944DFEE226F7CAA00A6A45E /* libraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = libraryViewController.swift; sourceTree = "<group>"; };
 		F944DFF22270BAA200A6A45E /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
+		F94D0522229E919A00277ED8 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = first.png; path = ../../first.png; sourceTree = "<group>"; };
+		F94D0524229E919F00277ED8 /* third.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = third.png; path = ../../third.png; sourceTree = "<group>"; };
+		F94D0526229E91A300277ED8 /* firstt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = firstt.png; sourceTree = "<group>"; };
+		F94D0528229E91A900277ED8 /* forth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forth.png; sourceTree = "<group>"; };
+		F94D052E229E9D2000277ED8 /* Walkthrough2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Walkthrough2.storyboard; sourceTree = "<group>"; };
 		F9A56AF3227A0A2F002EC792 /* purinmap.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = purinmap.xcodeproj; sourceTree = "<group>"; };
 		F9A56AFD227EA285002EC792 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		F9A56B3D227F37A3002EC792 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
@@ -177,6 +187,10 @@
 		F934F897228F1ADD00B12E76 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				F94D0522229E919A00277ED8 /* first.png */,
+				F94D0524229E919F00277ED8 /* third.png */,
+				F94D0526229E91A300277ED8 /* firstt.png */,
+				F94D0528229E91A900277ED8 /* forth.png */,
 				F934F8C922957E4600B12E76 /* map3.png */,
 				F934F8C722957B4F00B12E76 /* map.PNG */,
 				F934F89A228F1B1200B12E76 /* prin.png */,
@@ -225,6 +239,7 @@
 				F934F89422894B4700B12E76 /* ListTableViewCell.xib */,
 				F934F89C2293E57000B12E76 /* ResultViewController.swift */,
 				F944DFBE2268E3BB00A6A45E /* Main.storyboard */,
+				F94D052E229E9D2000277ED8 /* Walkthrough2.storyboard */,
 				F944DFC12268E3BE00A6A45E /* Assets.xcassets */,
 				F944DFC32268E3BE00A6A45E /* LaunchScreen.storyboard */,
 				F944DFC62268E3BE00A6A45E /* Info.plist */,
@@ -411,10 +426,12 @@
 				F9BA032F229AF0D00011950F /* appicon-Small-50@2x.png in Resources */,
 				F944DFC52268E3BE00A6A45E /* LaunchScreen.storyboard in Resources */,
 				F9BA032D229AF0D00011950F /* appicon-Small@2x.png in Resources */,
+				F94D0529229E91A900277ED8 /* forth.png in Resources */,
 				F9BA0328229AF0D00011950F /* appicon-Small-50.png in Resources */,
 				F9BA0331229AF0D00011950F /* appicon-76@2x.png in Resources */,
 				F944DFC22268E3BE00A6A45E /* Assets.xcassets in Resources */,
 				F9BA0330229AF0D00011950F /* appicon-Small-40@2x.png in Resources */,
+				F94D052F229E9D2000277ED8 /* Walkthrough2.storyboard in Resources */,
 				F9BA0329229AF0D00011950F /* appicon-Small@3x.png in Resources */,
 				F934F89B228F1B1200B12E76 /* prin.png in Resources */,
 				F934F8C822957B4F00B12E76 /* map.PNG in Resources */,
@@ -423,14 +440,17 @@
 				F9BA0338229AF0D00011950F /* iTunesArtwork@2x in Resources */,
 				F9BA0334229AF0D00011950F /* appicon-Small.png in Resources */,
 				F934F8CA22957E4600B12E76 /* map3.png in Resources */,
+				F94D0525229E919F00277ED8 /* third.png in Resources */,
 				F9BA0332229AF0D00011950F /* appicon-83.5@2x.png in Resources */,
 				F9BA0336229AF0D00011950F /* default.png in Resources */,
 				F9BA0337229AF0D00011950F /* appicon@2x.png in Resources */,
 				F9BA0335229AF0D00011950F /* appicon-60@3x.png in Resources */,
 				F9BA032C229AF0D00011950F /* appicon-76.png in Resources */,
 				F934F89622894B4700B12E76 /* ListTableViewCell.xib in Resources */,
+				F94D0523229E919A00277ED8 /* first.png in Resources */,
 				F9BA033A229AF0D00011950F /* appicon-60@2x.png in Resources */,
 				F9BA032E229AF0D00011950F /* appicon-Small-40.png in Resources */,
+				F94D0527229E91A300277ED8 /* firstt.png in Resources */,
 				F9BA0339229AF0D00011950F /* appicon-72@2x.png in Resources */,
 				F9BA0333229AF0D00011950F /* appicon.png in Resources */,
 				F9BA032A229AF0D00011950F /* appicon-72.png in Resources */,
@@ -710,7 +730,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 2K446D59RQ;
-				FRAMEWORK_SEARCH_PATHS = /Users/watanabekoutarou/Desktop/purinmap;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/watanabekoutarou/Desktop/purinmap,
+				);
 				INFOPLIST_FILE = purinmap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -733,7 +756,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 2K446D59RQ;
-				FRAMEWORK_SEARCH_PATHS = /Users/watanabekoutarou/Desktop/purinmap;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/watanabekoutarou/Desktop/purinmap,
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = purinmap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
