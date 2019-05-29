@@ -97,15 +97,22 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
         
         //セキュリティ認証のステータスを取得
         let status = CLLocationManager.authorizationStatus()
-        if status == CLAuthorizationStatus.notDetermined {
+        if (status != CLAuthorizationStatus.authorizedAlways) && (status != CLAuthorizationStatus.authorizedWhenInUse) {
+            
+            print("Status is \(status)")
             //まだ認証が得られてない場合は、認証ダイアログを表示
-            myLocationManager.requestAlwaysAuthorization()
-        }
+            self.myLocationManager.requestAlwaysAuthorization()
+            
+            myLocationManager.startUpdatingLocation()
+            
+            
+        } else {
         
         //現在地取得の開始
         myLocationManager.startUpdatingLocation()
         print("現在地取得なう")
         
+    }
     }
     
     
@@ -201,14 +208,7 @@ class mapViewController: UIViewController, CLLocationManagerDelegate,MKMapViewDe
     //現在地の取得に失敗した場合の処理
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("現在地の取得に失敗しました")
-        //位置情報の取得許可をiPhone上で行う
-        let alert = UIAlertController(
-            title: "位置情報の取得失敗", message: "位置情報の利用を許可してください", preferredStyle: .alert
-        )
         
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil
-            
-        ))
     }
     
     

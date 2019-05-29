@@ -43,7 +43,7 @@ class ListTableViewController: UITableViewController {
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+        // #warning Incomplete implementation, return the number of sectionsg
         return 1
     }
 
